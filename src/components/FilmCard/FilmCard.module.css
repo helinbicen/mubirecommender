@@ -1,0 +1,102 @@
+.cardContainer {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  position: relative;
+  height: 40vh;
+}
+
+.filmCover {
+  width: 100%;
+  height: 100%;
+  opacity: 20%;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.filmInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border-right: 3px solid #fff;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.year {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.director {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.durationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genres {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.genre {
+  margin: 0;
+  padding: 0;
+}
+
+.averageRating {
+  color: #f3c406;
+  font-weight: 700;
+}
+
+.descriptionContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.shortSynopsis {
+  padding: 0.5rem 1rem;
+}
+
+
+
+.urlButton {
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  font-weight: 700;
+}
+
+.urlButton:hover {
+  background-color: rgb(0, 20, 137);
+  color: #fff;
+}
