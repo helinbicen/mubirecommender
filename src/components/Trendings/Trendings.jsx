@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import FilmCard from "../FilmCard/FilmCard";
+import style from "./Trendings.module.css"
+import { API_URL } from "../../helpers/api";
 
 function Trendings() {
   const [loading, setLoading] = useState(true);
@@ -11,14 +13,14 @@ function Trendings() {
   useEffect(() => {
     axios({
       method: "get",
-      url: "https://api.mubi.com/v4/collections/trending/films",
+      url: `${API_URL}/films`,
       headers: {
         "Client-Country": "TR",
         Client: "web",
       },
     }).then((response) => {
       setLoading(false);
-      const data = response?.data?.films;
+      const data = response?.data;
       if (data) {
         setFilms(data);
       }
@@ -28,7 +30,7 @@ function Trendings() {
   return (
     films && (
       <>
-        <div>
+        <div className={style.trendings}>
           <h1>TRENDINGS</h1>
           {films?.map((film, index) => (
             <>
