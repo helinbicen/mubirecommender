@@ -31,7 +31,6 @@ const Trendings = () => {
     films && (
       <>
         <div className={style.trendings}>
-          <h1>TRENDINGS</h1>
           {films?.map((film, index) => (
             <>
               <FilmCard film={film} />
