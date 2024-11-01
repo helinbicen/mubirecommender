@@ -74,13 +74,34 @@
   padding: 0;
 }
 
-.mubiRating, .imdbRating, .averageRating {
-  color: #f3c406;
-  font-weight: 700;
+.ratingsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 1rem;
+  height: 3rem;
+  gap: 1rem;
 }
 
-.ratingType{
-  color: #fff !important;
+.ratingType {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.platformIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  fill: #fff;
+}
+
+.mubiRating,
+.imdbRating,
+.averageRating {
+  color: #f3c406;
+  font-weight: 700;
 }
 
 .descriptionContainer {
@@ -94,8 +115,6 @@
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
 }
-
-
 
 .urlButton {
   padding: 1rem 0.5rem;
@@ -111,4 +130,3 @@
   background-color: rgb(0, 20, 137);
   color: #fff;
 }
-

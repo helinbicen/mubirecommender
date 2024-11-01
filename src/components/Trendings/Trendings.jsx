@@ -2,12 +2,11 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import FilmCard from "../FilmCard/FilmCard";
-import style from "./Trendings.module.css"
+import style from "./Trendings.module.css";
 import { API_URL } from "../../helpers/api";
 
-function Trendings() {
+const Trendings = () => {
   const [loading, setLoading] = useState(true);
-  const [titles, setTitles] = useState([]);
   const [films, setFilms] = useState([]);
 
   useEffect(() => {
@@ -28,19 +27,20 @@ function Trendings() {
   }, []);
 
   return (
+    !loading &&
     films && (
       <>
         <div className={style.trendings}>
           <h1>TRENDINGS</h1>
           {films?.map((film, index) => (
             <>
-            <FilmCard film={film} />
+              <FilmCard film={film} />
             </>
           ))}
         </div>
       </>
     )
   );
-}
+};
 
 export default Trendings;

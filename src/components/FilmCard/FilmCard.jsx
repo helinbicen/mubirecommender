@@ -1,8 +1,10 @@
 import React from "react";
 import style from "./FilmCard.module.css";
 import { BsClockFill } from "react-icons/bs";
+import Mubi from "../../assets/mubi.svg";
+import Imdb from "../../assets/imdb.svg";
 
-function FilmCard({ film }) {
+const FilmCard = ({ film }) => {
   return (
     <div
       style={{ backgroundColor: `#${film.filmColor}` }}
@@ -30,21 +32,26 @@ function FilmCard({ film }) {
               <li className={style.genre}>● {genre}</li>
             ))}
           </ul>
-          <div className={style.ratingContainer}>
-            <p>
-              <span className={style.ratingType}>Mubi Rating: </span>
-              <span className={style.mubiRating}> {film.mubiRating} / 10 </span>
-            </p>
-            <p>
-              <span className={style.ratingType}>Imdb Rating: </span>
-              <span className={style.imdbRating}>{film.imdbRating} / 10</span>
-            </p>
-            <p>
-              <span className={style.ratingType}>Average Rating: </span>
-              <span className={style.averageRating}>
-                {film.averageRating} / 10
+          <div className={style.ratingsContainer}>
+            <div className={style.ratingType}>
+              <span>
+                <img src={Mubi} className={style.platformIcon} alt="Mubi" />
               </span>
-            </p>
+              <span className={style.mubiRating}> {film.mubiRating} / 10 </span>
+            </div>
+            <div className={style.ratingType}>
+              <span>
+                <img src={Imdb} className={style.platformIcon} alt="Imdb" />
+              </span>
+              <span className={style.imdbRating}>{film.imdbRating} / 10</span>
+            </div>
+          </div>
+
+          <div className={style.ratingType}>
+            <span>Average Rating: </span>
+            <span className={style.averageRating}>
+              {film.averageRating} / 10
+            </span>
           </div>
         </div>
 
@@ -57,6 +64,6 @@ function FilmCard({ film }) {
       </div>
     </div>
   );
-}
+};
 
 export default FilmCard;
