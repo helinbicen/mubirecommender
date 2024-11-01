@@ -37,20 +37,20 @@ const FilmCard = ({ film }) => {
               <span>
                 <img src={Mubi} className={style.platformIcon} alt="Mubi" />
               </span>
-              <span className={style.mubiRating}> {film.mubiRating} / 10 </span>
+              <span className={style.mubiRating}> {film.mubiRating}/10</span>
             </div>
             <div className={style.ratingType}>
               <span>
                 <img src={Imdb} className={style.platformIcon} alt="Imdb" />
               </span>
-              <span className={style.imdbRating}>{film.imdbRating} / 10</span>
+              <span className={style.imdbRating}>{film.imdbRating}/10</span>
             </div>
           </div>
 
           <div className={style.ratingType}>
-            <span>Average Rating: </span>
+            <span>Average Rating</span>
             <span className={style.averageRating}>
-              {film.averageRating} / 10
+              {film.averageRating}/10
             </span>
           </div>
         </div>
